@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+body {
+  font-family: 'Mont', sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+  background-color: white;
+}
+
+/* ---------------- HEADER ---------------- */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: black;
+  gap: 20px;
+  background-color: #f5f5f5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 60px;
+}
+
+
+.header .left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.header .left a,
+.header .left button,
+.header .left span {
+  color: black;
+  text-decoration: none;
+}
+
+.home-icon img,
+.logout-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.home-icon:hover,
+.logout-btn:hover {
+  opacity: 0.7;
+}
+
+.logout-btn {
+  padding: 8px 16px;
+  background: transparent;
+  outline: none;
+  color: black;
+  border: 0;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.username {
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 1024px) {
+  .header {
+    gap: 10px;
+  }
+
+  .header .left {
+    gap: 15px;
+  }
+
+  .home-icon img,
+  .logout-icon img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .username {
+    font-size: 14px;
+  }
+
+  .logout-btn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 100px;
+  }
+
+  .header {
+    gap: 5px;
+    height: auto;
+  }
+
+  .header .left {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .home-icon img,
+  .logout-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .username {
+    display: none;
+  }
+
+  .logout-btn {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 120px;
+  }
+
+  .header {
+    padding: 8px 15px;
+  }
+
+  .header .left {
+    gap: 10px;
+  }
+
+  .home-icon img,
+  .logout-icon img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .username {
+    display: none;
+  }
+
+  .logout-btn {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}
